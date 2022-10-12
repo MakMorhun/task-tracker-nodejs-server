@@ -1,10 +1,9 @@
 const http = require('http')
 const app = require('./app')
 
-const port = 5200
+const PORT = 5200
 
-app.set('port', port)
 
 const server = http.createServer(app)
 
-server.listen(port)
+server.listen(process.env.PORT || PORT)
